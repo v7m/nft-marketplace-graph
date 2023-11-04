@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client"
+import { gql } from "@apollo/client";
 
 // See more example queries on https://thegraph.com/explorer/subgraph/protofire/maker-protocol
 const GET_ACTIVE_ITEMS = gql`
@@ -13,4 +13,4 @@ const GET_ACTIVE_ITEMS = gql`
         }
     }
 `
-export default GET_ACTIVE_ITEMS
+export default GET_ACTIVE_ITEMS;
