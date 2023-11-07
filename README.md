@@ -1,6 +1,6 @@
 # NFT Marketplace The Graph
 
-*The purpose of this project is to acquire hands-on experience in web3 application development.*
+> *This is an educational project with the purpose of acquiring hands-on experience in web3 application development using smart contracts written in Solidity.*
 
 The NFT Marketplace project consists of 3 parts:
 
@@ -32,35 +32,44 @@ The NFT Marketplace project consists of 3 parts:
 
 # Getting Started
 
-1. Install Subgraph CLI:
+1. Clone the repository:
+
+```
+git clone https://github.com/v7m/nft-marketplace-graph
+cd nft-marketplace-graph
+```
+
+2. Install Subgraph CLI:
 
 ```
 yarn global add @graphprotocol/graph-cli
 ```
 
-2. Create a New Subgraph in The Graph UI:
+3. Create a New Subgraph in The Graph UI:
 
 - Log into [The Graph UI](https://thegraph.com/studio/subgraph).
-- Create a new Subgraph using `Ethereum Sepolia`` as the network.
+- Create a new Subgraph using `Ethereum Sepolia` as the network.
 
-3. Initialize Subgraph:
+4. Initialize Subgraph:
 
 ```
 graph init --studio nft-marketplace
 ```
 
-4. Authenticate the CLI:
+5. Authenticate the CLI:
 
 ```
 graph auth  --studio YOUR_DEPLOY_KEY_HERE
 ```
 
-5. Update your `subgraph.yaml` file:
+# Usage
 
--   Update the `address` field with your NftMarketplace Address
--   Update the `startBlock` field with the block number just before your contract was deployed (`blockNumber - 1`)
+1. Update your `subgraph.yaml` file:
 
-6. Build Subgraph locally:
+    - Update the `address` field with your NftMarketplace Address
+    - Update the `startBlock` field with the block number just before your contract was deployed (`blockNumber - 1`)
+
+2. Build Subgraph locally:
 
 ```
 graph codegen && graph build
@@ -69,7 +78,7 @@ graph codegen && graph build
 -   `graph codegen`: Generates code in the `generated` folder based on your `schema.graphql`
 -   `graph build`: Generates the build that will be uploaded to The Graph
 
-7. Deploy Subgraph:
+3. Deploy Subgraph:
 
 Replace `VERSION_NUMBER_HERE` with a version number like `0.0.1`.
 
